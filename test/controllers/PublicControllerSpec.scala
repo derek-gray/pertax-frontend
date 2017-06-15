@@ -78,7 +78,7 @@ class PublicControllerSpec extends BaseSpec  {
 
       val r = c.redirectToExitSurvey(Origin("PERTAX"))(buildFakeRequestWithAuth("GET"))
       status(r) shouldBe SEE_OTHER
-      redirectLocation(r) shouldBe Some("/feedback-survey?origin=PERTAX")
+      redirectLocation(r) shouldBe Some("http://localhost:9514/feedback-survey?origin=PERTAX")
     }
   }
 
